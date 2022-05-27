@@ -125,4 +125,6 @@ if(X1 % 2 == 0 ) {
 else {
     alert("El Numero es impar ");
 } 
+
+> Nota: El algoritmo #3 se encuentra en desarrollo
 ---
