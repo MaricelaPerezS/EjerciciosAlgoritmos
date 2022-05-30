@@ -63,6 +63,32 @@ else if((X2 < X1) && (X2 < X3)){
 else{
     alert("El Numero Menor es "+ X3);
 } */
+// 3. Adivinar un número en el menor número de pasos posible
+//Adivinar
+function Adivina(){
+    let superior = 100;
+    let inferior = 0;
+    let noEncontrado=true;
+    while(noEncontrado){
+        let mid = parseInt(inferior + ((superior - inferior)/ 2) );
+        console.log(mid);
+        console.log( ((superior - inferior)/ 2) );
+        if(((superior - inferior)/ 2) <1 ){
+            noEncontrado = false;
+            alert ("Tú número es el " + (parseInt(mid) + 1 ));
+            break;
+        } //if
+        let res = confirm("Tu número es menor o igual a " + mid);
+        if (res){
+            superior = mid;
+        } else {
+            inferior = mid;
+        } //if
+        console.log(inferior, superior);
+    }//while
+}//Adivinar
+   
+Adivina();
 
 
 /* //4.	Solicitar un entero (entre el 100 y el 200) y determinar si es múltiplo de 3
@@ -106,10 +132,11 @@ else {
 
 
  //6.-Elabora un algoritmo para leer un número y determinar si es par o impar
-let X1 = prompt("Ingresa el primer Numero");
-if(X1 % 2 == 0 ) {
-    alert("El Numero es par ");
-}
-else {
-    alert("El Numero es impar ");
-} 
+// let X1 = prompt("Ingresa el primer Numero");
+// if(X1 % 2 == 0 ) {
+//     alert("El Numero es par ");
+// }
+// else {
+//     alert("El Numero es impar ");
+// } 
+
